@@ -32,11 +32,9 @@ const availableKeywords = [
         ];
 const inputBox = document.getElementById('input');
 const resultBox = document.getElementById('suggestions');
-const heightBox = document.querySelector('#input-box');
  
 inputBox.onkeyup = function() {
     const input = inputBox.value.toLowerCase();
-    resultBox.innerHTML = '';
     if (input.length) {
         const suggestions = availableKeywords.filter(keyword => keyword.toLowerCase().includes(input));
         suggestions.forEach(suggestion => {
